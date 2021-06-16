@@ -1,0 +1,36 @@
+@import 'styles/utils/functions';
+
+.buttonList {
+  margin-top: rem(20);
+  padding-bottom: rem(6);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+
+  .btn {
+    padding: 0;
+    font-family: $font-family-primary;
+    font-size: rem(12);
+    line-height: rem(15);
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $button-text-color-secondary;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btnToLeft {
+    justify-self: start;
+  }
+
+  .btnToRight {
+    justify-self: end;
+    grid-column: 2 / 3;
+  }
+
+  .btnNotActive {
+    display: none;
+  }
+}

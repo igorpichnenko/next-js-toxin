@@ -1,0 +1,18 @@
+.main {
+  background: url('/table-interior.jpg') no-repeat;
+  background-position: center -100px;
+
+  @media (min-width: 1440px) {
+    min-height: 724px;
+    background-size: cover;
+  }
+}
+
+.wrap {
+  padding: 50px 0 170px;
+}
+
+.titleWrap {
+  margin-bottom: 20px;
+  text-align: center;
+}

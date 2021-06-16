@@ -1,0 +1,9 @@
+@import 'styles/utils/variables.scss';
+
+.cards {
+  padding: 50px;
+
+  @media screen and (max-width: $phone-width) {
+    padding: 10px 10px;
+  }
+}

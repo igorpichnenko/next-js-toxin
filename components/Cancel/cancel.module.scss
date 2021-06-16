@@ -1,0 +1,28 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.cancel {
+  display: grid;
+  row-gap: 20px;
+  max-width: 340px;
+}
+
+.title {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-size: rem(19);
+  line-height: rem(23);
+  font-weight: $bold;
+  font-style: normal;
+  color: $text-color;
+}
+
+.text {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: $normal;
+  font-style: normal;
+  color: $text-color-brightness-75;
+}

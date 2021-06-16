@@ -1,0 +1,15 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.bookedRoomsPage {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  @media (max-width: $table-width) {
+    margin-bottom: 20px;
+  }
+}

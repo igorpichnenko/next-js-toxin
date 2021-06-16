@@ -1,0 +1,37 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.filter {
+  width: 266px;
+}
+
+.datepicker {
+  margin-bottom: rem(21);
+}
+
+.slider {
+  margin-top: rem(25);
+}
+
+.text {
+  margin-top: rem(14);
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: $text-color-brightness-50;
+}
+
+.checkboxTitle {
+  margin-top: rem(31);
+  margin-bottom: rem(4);
+}
+
+.checkboxRichTitle {
+  margin-top: rem(34);
+  margin-bottom: rem(5);
+}
+
+.dropdown {
+  margin-top: rem(29);
+  margin-bottom: rem(31);
+}

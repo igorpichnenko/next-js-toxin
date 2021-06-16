@@ -1,0 +1,141 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.booking {
+  padding: rem(40) rem(30) rem(30) rem(30);
+  max-width: 380px;
+  background: $body-color;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.bookingHeader {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: end;
+}
+
+.symbol {
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  font-weight: bold;
+  color: $text-color;
+}
+
+.number {
+  font-family: $font-family-primary;
+  font-size: rem(24);
+  font-weight: bold;
+  color: $text-color;
+}
+
+.luxury {
+  margin-left: rem(8);
+  font-family: $font-family-primary;
+  font-size: rem(15);
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.priceValue {
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(18);
+  font-weight: bold;
+  color: $text-color-brightness-50;
+}
+
+.priceText {
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(18);
+  font-weight: normal;
+  color: $text-color-brightness-50;
+}
+
+.containerDatepicker {
+  margin-top: rem(23);
+}
+
+.containerDropdownList {
+  margin-top: rem(21);
+}
+
+.itemList {
+  margin: rem(18) 0 0 0;
+  padding: 0;
+  display: grid;
+  row-gap: 10px;
+  list-style-type: none;
+}
+
+.item {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 235px 75px;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: normal;
+  font-style: normal;
+  color: $text-color-brightness-75;
+}
+
+.item:last-child {
+  padding-top: 1px;
+  line-height: rem(20);
+}
+
+.itemText {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 8px;
+}
+
+.itemIcon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-content: center;
+  color: $text-color-brightness-25;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.itemValue {
+  text-align: right;
+}
+
+.total {
+  margin-top: rem(47);
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+}
+
+.totalTitle,
+.totalValue {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-size: rem(19);
+  line-height: rem(23);
+  font-weight: bold;
+  font-style: normal;
+  color: $text-color;
+}
+
+.totalLine {
+  margin: 0 rem(3) rem(3) rem(3);
+  border-bottom: 1px dashed $text-color-brightness-25;
+}
+
+.containerButton {
+  margin-top: rem(22);
+}
+
+.containerButton > button {
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+.datepickerWrapper {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+
+  @media screen and (min-width: 380px) {
+    min-width: 320px;
+  }
+}
+
+.close {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  border-width: 0;
+  transition: 0.3s;
+}
+
+.open {
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  border-width: 1px;
+}

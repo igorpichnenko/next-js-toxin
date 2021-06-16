@@ -1,0 +1,51 @@
+@import 'styles/utils//variables.scss';
+@import 'styles/utils//functions.scss';
+
+.nav {
+  $self: &;
+
+  @media screen and (max-width: $sm-desktop-width) {
+    display: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: $tr-fast;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.mobile {
+  @media screen and (max-width: $sm-desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list {
+    margin: 0;
+    margin-bottom: rem(20);
+    width: 100%;
+  }
+}
+
+.buttonWrapper {
+  margin-right: rem(20);
+  display: inline-block;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $sm-desktop-width) {
+    &:last-child {
+      margin-right: 0;
+      padding-top: rem(20);
+    }
+
+    padding-left: rem(20);
+  }
+}

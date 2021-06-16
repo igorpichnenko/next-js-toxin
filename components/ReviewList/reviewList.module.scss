@@ -1,0 +1,43 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titleWrap {
+  margin-bottom: 20px;
+  display: flex;
+  max-width: 100%;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.amount {
+  padding-bottom: 3px;
+  font-size: rem(14);
+  line-height: rem(14);
+  color: $text-color-brightness-50;
+
+  @media (max-width: $phone-width) {
+    display: flex;
+  }
+}
+
+.item {
+  margin-bottom: 23px;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.list .item:last-of-type {
+  margin-bottom: 0;
+}

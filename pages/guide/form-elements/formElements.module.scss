@@ -1,0 +1,24 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.wrap {
+  padding: 20px;
+  max-width: 750px;
+  background: rgb(238, 234, 234);
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 266px;
+}
+
+.text {
+  margin-top: 13px;
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: $text-color-brightness-50;
+}

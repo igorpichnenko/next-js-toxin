@@ -1,0 +1,127 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  transition: $tr-fast;
+}
+
+.slidesWrapper {
+  width: 3000px;
+  height: 155px;
+  transition: margin-right $tr-fast;
+  transition: $tr-fast;
+}
+
+.slide {
+  position: relative;
+  display: inline-block;
+  width: 270px;
+
+  &::after {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 152px;
+    opacity: 0;
+    content: '';
+    box-shadow:
+      60px -1px 26px -5px rgba(34, 60, 80, 0.4) inset,
+      -60px -1px 26px -5px rgba(34, 60, 80, 0.4) inset;
+    transition: $tr-fast;
+  }
+}
+
+.img {
+  display: block;
+  max-width: 270px;
+}
+
+.slideShadow {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.arrowsWrapper {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: $tr-fast;
+}
+
+.arrowsWrapVisible {
+  opacity: 1;
+}
+
+.arrowRight,
+.arrowLeft {
+  display: inline-flex;
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    content: '';
+  }
+}
+
+.arrowLeft {
+  position: absolute;
+
+  &::after {
+    border: 2px solid $button-text-color-primary;
+    border-right: none;
+    border-bottom: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.arrowRight {
+  position: absolute;
+  right: 0;
+
+  &::after {
+    border: 2px solid $button-text-color-primary;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+  }
+}
+
+.dotsWrapper {
+  position: absolute;
+  z-index: 11;
+  right: 15px;
+  bottom: 18px;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: rem(3);
+  }
+}
+
+.activeDot {
+  background-color: white;
+  box-shadow: $box-shadow-primary;
+}

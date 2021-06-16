@@ -1,0 +1,22 @@
+.wrap {
+  margin-bottom: 20px;
+  display: flex;
+  overflow: hidden;
+  min-height: 48px;
+}
+
+.tabListWrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+.tabList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}

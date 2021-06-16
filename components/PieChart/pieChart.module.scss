@@ -1,0 +1,18 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.excellent {
+  fill: url(#excellent);
+}
+
+.good {
+  fill: url(#good);
+}
+
+.ok {
+  fill: url(#ok);
+}
+
+.poor {
+  fill: url(#poor);
+}

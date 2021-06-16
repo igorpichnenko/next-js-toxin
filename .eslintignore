@@ -1,0 +1,4 @@
+node_modules
+pages/api
+.next
+.eslintrc.js

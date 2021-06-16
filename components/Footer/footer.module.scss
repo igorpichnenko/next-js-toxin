@@ -1,0 +1,183 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.footer {
+  position: relative;
+  flex: 0 0 auto;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+
+  &::after {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background: transparentize($text-color, 0.9);
+
+    @media (max-width: 555px) {
+      bottom: 106px;
+    }
+
+    @media (max-width: 364px) {
+      bottom: 115px;
+    }
+  }
+
+  &WithBorderTop {
+    border-top: 1px solid transparentize($text-color, 0.75);
+  }
+
+  &TightBottom::after {
+    bottom: 70px;
+  }
+}
+
+.logoWrap {
+  margin-bottom: rem(13);
+}
+
+.copyrightWrap {
+  @media (max-width: 555px) {
+    margin-bottom: rem(20);
+    text-align: center;
+  }
+}
+
+.col {
+  &:nth-child(2) {
+    @media (width: $desktop-width) {
+      margin-right: rem(93);
+    }
+  }
+
+  &:last-child {
+    @media (width: $desktop-width) {
+      margin-left: auto;
+    }
+  }
+
+  &Large:first-child {
+    margin-right: 3.5%;
+  }
+}
+
+.content {
+  padding: rem(102) 0 rem(105);
+  display: flex;
+
+  @media (max-width: $md-desktop-width) {
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+  }
+
+  @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+    padding-top: rem(30);
+    padding-bottom: rem(40);
+    flex-direction: column;
+  }
+
+  & > .col {
+    @media (max-width: $md-desktop-width) {
+      margin-right: 14%;
+      box-sizing: border-box;
+      width: 240px;
+    }
+
+    @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+      margin-bottom: rem(40);
+      width: 100%;
+    }
+  }
+}
+
+.colGroup {
+  padding-top: rem(2);
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  @media (max-width: $md-desktop-width) {
+    flex-wrap: wrap;
+  }
+
+  .col {
+    @media (max-width: $md-desktop-width) {
+      margin-bottom: rem(40);
+      box-sizing: border-box;
+      width: 50%;
+    }
+
+    @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+      margin-bottom: rem(40);
+      width: 100%;
+    }
+
+    &:first-child {
+      @media (width: $desktop-width) {
+        margin-right: rem(57);
+      }
+    }
+
+    &:nth-child(3) {
+      @media (max-width: $md-desktop-width) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+        margin-bottom: rem(30);
+      }
+    }
+
+    &:last-child {
+      @media (max-width: $md-desktop-width) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.titleWrap {
+  margin-bottom: rem(20);
+
+  @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+    margin-bottom: rem(10);
+    padding-bottom: rem(10);
+    border-bottom: 2px solid $text-color;
+  }
+}
+
+.textContentWrap {
+  margin-bottom: rem(22);
+  width: 260px;
+
+  @media (max-width: $md-desktop-width) {
+    width: 85%;
+  }
+
+  @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+    width: 100%;
+  }
+}
+
+.titleNavWrap {
+  margin-bottom: rem(23);
+
+  @media (min-width: $sm-phone-width) and (max-width: $table-width) {
+    margin-bottom: rem(10);
+    padding-bottom: rem(10);
+    border-bottom: 2px solid $text-color;
+  }
+}
+
+.sideInfo {
+  padding: rem(20) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 555px) {
+    flex-direction: column;
+  }
+}

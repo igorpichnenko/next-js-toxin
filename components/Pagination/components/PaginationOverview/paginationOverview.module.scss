@@ -1,0 +1,14 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.overview {
+  padding-left: rem(6);
+
+  p {
+    margin: 0;
+    margin-top: rem(7);
+    font-size: rem(14);
+    line-height: rem(24);
+    color: transparentize($text-color, 0.25);
+  }
+}

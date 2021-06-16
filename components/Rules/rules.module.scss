@@ -1,0 +1,26 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.rules {
+  display: grid;
+  row-gap: 20px;
+  max-width: 260px;
+}
+
+.title {
+  margin: 0;
+  padding-left: 20px;
+  font-family: $font-family-primary;
+  font-size: rem(19);
+  line-height: rem(23);
+  font-weight: $bold;
+  font-style: normal;
+  color: $text-color;
+}
+
+.itemList {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 10px;
+}

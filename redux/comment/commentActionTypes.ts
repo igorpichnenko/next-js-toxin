@@ -1,0 +1,7 @@
+enum ActionType {
+  ADD_COMMENT = 'ADD_COMMENTS',
+  ADD_COMMENT_ERROR = 'ADD_COMMENT_ERROR',
+  REMOVE_COMMENT = 'REMOVE_COMMENT',
+}
+
+export default ActionType;

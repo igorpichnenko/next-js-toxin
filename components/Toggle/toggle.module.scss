@@ -1,0 +1,59 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.toggle {
+  position: relative;
+  padding-left: 50px;
+  display: block;
+  min-height: 24px;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(20);
+  color: $text-color-brightness-75;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border: $border-input;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    content: '';
+    background: $text-color-brightness-25;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+  }
+}
+
+.input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  &:checked {
+    + .slider {
+      border: 1px solid $button-text-color-secondary;
+
+      &::before {
+        background: $button-color-primary;
+        transform: translateX(20px);
+      }
+    }
+  }
+}

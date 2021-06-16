@@ -1,0 +1,10 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.copyright {
+  margin: 0;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: rem(14);
+  line-height: rem(17);
+  color: transparentize($text-color, 0.25);
+}

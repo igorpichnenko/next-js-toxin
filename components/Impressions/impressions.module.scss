@@ -1,0 +1,71 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.impressions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin-bottom: 22px;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.diagram {
+  margin-right: 30px;
+  padding-bottom: 2px;
+  width: auto;
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+.legend {
+  max-width: 100%;
+  height: min-content;
+  flex-grow: 1;
+  flex-basis: 0;
+  align-self: flex-end;
+}
+
+.item {
+  position: relative;
+  padding-left: 15px;
+  font-size: rem(14);
+  line-height: rem(24);
+
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-radius: 50%;
+  }
+}
+
+.excellent {
+  &::before {
+    background: $gradient-excellent;
+  }
+}
+
+.good {
+  &::before {
+    background: $gradient-good;
+  }
+}
+
+.poor {
+  &::before {
+    background: $gradient-poor;
+  }
+}
+
+.ok {
+  &::before {
+    background: $gradient-ok;
+  }
+}

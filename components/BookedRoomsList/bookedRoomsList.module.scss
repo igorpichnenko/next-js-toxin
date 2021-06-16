@@ -1,0 +1,25 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.roomsList {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  row-gap: 20px;
+  column-gap: 10px;
+
+  @media (max-width: $md-desktop-width) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: $table-width) {
+    justify-content: space-around;
+  }
+}
+
+.roomsItem {
+  width: auto;
+  max-width: 100%;
+  flex: 0 0 auto;
+}

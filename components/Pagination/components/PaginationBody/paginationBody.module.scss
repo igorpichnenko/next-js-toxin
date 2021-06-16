@@ -1,0 +1,93 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.links {
+  display: flex;
+}
+
+.pages {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.pagesButton {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: top;
+  color: transparentize($text-color, 0.5);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+.pagesDotted {
+  cursor: default;
+
+  &:hover {
+    color: transparentize($text-color, 0.5);
+  }
+}
+
+.nextPage {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background: $button-color-secondary;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &Arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-flex;
+    max-width: rem(18);
+    max-height: rem(18);
+    align-items: center;
+    fill: $bg-color-primary;
+    transition: transform 0.2s ease;
+  }
+
+  &:active {
+    .nextPageArrow {
+      transform: translateX(5px);
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    .nextPageArrow {
+      transform: translateX(0);
+    }
+  }
+}
+
+.pagesItem {
+  &Active {
+    .pagesButton {
+      font-weight: bold;
+      color: $button-text-color-primary;
+      background: $button-color-primary;
+
+      &:hover {
+        color: $button-text-color-primary;
+      }
+    }
+  }
+}

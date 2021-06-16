@@ -1,0 +1,190 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/functions';
+
+div.react-datepicker {
+  width: 100%;
+  $self: &;
+
+  &__month-name,
+  &__year {
+    font-family: $font-family-primary;
+    font-size: rem(19);
+    font-weight: bold;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 100%;
+    max-width: 24px;
+    min-height: 24px;
+    background-image: url('/arrow-forward.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &_left {
+      right: none;
+      left: 15px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__day--keyboard-selected {
+    background: none;
+  }
+
+  &__day-names {
+    margin-top: rem(30);
+    margin-right: rem(20);
+    margin-left: rem(20);
+    display: flex;
+  }
+
+  &__month-container {
+    float: none;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    position: relative;
+    margin-top: rem(10);
+    background-color: #fff;
+    border: none;
+  }
+
+  &__week {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__current-month {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__month--selecting {
+    #{$self}__day--selecting-range {
+      background: none;
+    }
+    #{$self}__day--selecting-range-start {
+      background: $button-color-primary;
+      border-radius: 50%;
+    }
+  }
+
+  &__month--selecting-range {
+    #{$self}__day--in-range:not(#{$self}__day--range-start, #{$self}__day--range-end) {
+      color: $text-color-brightness-50;
+      background: none;
+    }
+  }
+
+  #{$self}__day--outside-month {
+    color: $text-color-brightness-25;
+  }
+
+  &__day-name,
+  &__day {
+    margin: 0;
+    display: inline-flex;
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-primary;
+
+    @media screen and (max-width: 380px) {
+      height: 33px;
+    }
+  }
+
+  &__day-name {
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $primary-color;
+
+    &:hover {
+      color: $text-color-brightness-50;
+      background: none;
+    }
+  }
+
+  &__day {
+    color: $text-color-brightness-50;
+
+    &:hover {
+      color: $text-color-brightness-50;
+      background: none;
+      #{$self}__day-in-selecting--range {
+        color: $text-color-brightness-50;
+      }
+    }
+  }
+
+  &__day--in-range {
+    position: relative;
+    color: $text-color-brightness-50;
+    background: none;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.25;
+      content: '';
+      background: $button-color-primary;
+    }
+  }
+
+  &__day--in-selecting-range {
+    color: $text-color-brightness-50;
+    background: none;
+  }
+
+  &__day--disabled {
+    color: $text-color-brightness-50;
+  }
+
+  #{$self}__day--selected {
+    color: $button-text-color-primary;
+    background: $button-color-primary;
+    border-radius: 50%;
+  }
+  #{$self}__day--today {
+    position: relative;
+    z-index: 10;
+    color: $button-text-color-primary;
+    background: $button-color-secondary;
+    border-radius: 50%;
+  }
+  #{$self}__day--range-start,
+  #{$self}__day--range-end,
+  #{$self}__day--selecting-range-start {
+    color: $button-text-color-primary;
+    background: $button-color-primary;
+    border-radius: 50%;
+  }
+
+  &__day--range-start {
+    &::before {
+      left: 50%;
+    }
+  }
+
+  &__day--range-end {
+    &::before {
+      right: 50%;
+    }
+  }
+
+  &__month {
+    margin: 0;
+    padding: 0 rem(20) rem(20);
+  }
+}

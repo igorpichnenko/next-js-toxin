@@ -1,0 +1,33 @@
+@import 'styles/utils/variables.scss';
+
+.excellentStart {
+  stop-color: $excellent-gradient-start;
+}
+
+.excellentEnd {
+  stop-color: $excellent-gradient-end;
+}
+
+.goodStart {
+  stop-color: $good-gradient-start;
+}
+
+.goodEnd {
+  stop-color: $good-gradient-end;
+}
+
+.poorStart {
+  stop-color: $poor-gradient-start;
+}
+
+.poorEnd {
+  stop-color: $poor-gradient-end;
+}
+
+.okStart {
+  stop-color: $ok-gradient-start;
+}
+
+.okEnd {
+  stop-color: $ok-gradient-end;
+}

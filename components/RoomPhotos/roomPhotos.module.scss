@@ -1,0 +1,69 @@
+@import 'styles/utils/variables.scss';
+
+$md-height: 150px;
+$sm-height: 130px;
+$xs-height: 100px;
+
+.photosWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $sm-desktop-width) {
+    height: 100%;
+  }
+}
+
+.mainCont {
+  max-width: 68.125%;
+  flex: 0 0 68.125%;
+
+  @media (max-width: $sm-desktop-width) {
+    max-width: 100%;
+    height: $md-height;
+    flex: 0 0 100%;
+  }
+
+  @media (max-width: $table-width) {
+    height: $sm-height;
+  }
+
+  @media (max-width: $phone-width) {
+    height: $xs-height;
+  }
+}
+
+.auxCont {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+
+  @media (max-width: $sm-desktop-width) {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.auxItem {
+  max-width: 100%;
+  height: 50%;
+  flex: 0 0 100%;
+
+  @media (max-width: $sm-desktop-width) {
+    height: $md-height;
+  }
+
+  @media (max-width: $table-width) {
+    height: $sm-height;
+  }
+
+  @media (max-width: $phone-width) {
+    height: $xs-height;
+  }
+}
+
+.image,
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

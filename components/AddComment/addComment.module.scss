@@ -1,0 +1,36 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.element {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 735px) {
+    flex-wrap: wrap;
+  }
+}
+
+.button {
+  margin-left: 10px;
+  width: 320px;
+
+  @media (max-width: 735px) {
+    margin-top: 10px;
+  }
+}
+
+.input {
+  margin-left: 10px;
+  max-width: 380px;
+
+  @media (max-width: 735px) {
+    width: 90%;
+  }
+}
+
+.text {
+  padding: 5px;
+  font-family: $font-family-primary;
+  border: 1px solid $text-color-brightness-50;
+}

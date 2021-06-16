@@ -1,0 +1,40 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.cardRoom {
+  display: block;
+  overflow: hidden;
+  width: 270px;
+  background-color: $bg-color-primary;
+  border-radius: 4px;
+  box-shadow: $box-shadow-primary;
+}
+
+.body {
+  padding: rem(10) rem(19);
+}
+
+.bodyItem {
+  padding-top: rem(8);
+  padding-bottom: rem(12);
+
+  &:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+}
+
+.reviews {
+  font-size: rem(14);
+  font-weight: bold;
+  color: $text-color-brightness-50;
+}
+
+.reviewText {
+  font-weight: normal;
+}

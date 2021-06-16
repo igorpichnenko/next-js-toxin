@@ -1,0 +1,136 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.listItem {
+  position: relative;
+  margin-right: rem(24);
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  @media screen and (max-width: $sm-desktop-width) {
+    margin: 0;
+    display: block;
+  }
+}
+
+.link {
+  font-size: rem(14);
+  line-height: 17px;
+  color: $text-color-brightness-50;
+  transition: $tr-fast;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  @media screen and (max-width: $sm-desktop-width) {
+    &:hover {
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: $sm-desktop-width) {
+    padding: rem(20) rem(20);
+    display: flex;
+    justify-content: flex-start;
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.linkDropdown {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::after {
+    margin-top: rem(4);
+    margin-bottom: rem(5);
+    margin-left: rem(10);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    content: '';
+    border: 2px solid $text-color-brightness-50;
+    border-top: none;
+    border-left: none;
+    transition: $tr-fast;
+    transform: rotate(45deg);
+  }
+}
+
+.dropdownList {
+  position: absolute;
+  z-index: 11;
+  top: 100%;
+  left: rem(-14);
+  padding: 0;
+  visibility: hidden;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-height: 0;
+  opacity: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: rem(23) solid white;
+  transition: all 0.2s ease-in-out 0.1s;
+  transform: translateY(-20px);
+
+  .link {
+    padding: rem(10) rem(20);
+    display: block;
+    transition: $tr-fast;
+  }
+
+  .link:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+
+  @media screen and (max-width: $sm-desktop-width) {
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    background-color: #ccc;
+    border: none;
+    transform: translateY(0);
+  }
+}
+
+.dropdownList .listItem {
+  margin: 0;
+  display: block;
+  max-width: 100%;
+}
+
+.listItem:hover {
+  .dropdownList {
+    visibility: visible;
+    height: auto;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+
+    .linkDropdown {
+      &::after {
+        margin-bottom: 0;
+        transition: $tr-fast ease-in;
+        transform: rotate(225deg);
+      }
+    }
+
+    @media screen and (max-width: $sm-desktop-width) {
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

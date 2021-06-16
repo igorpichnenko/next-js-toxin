@@ -1,0 +1,35 @@
+@import 'styles/utils/functions.scss';
+@import 'styles/utils/variables.scss';
+
+.Container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: $desktop-width;
+  height: 100%;
+  flex: 0 0 auto;
+
+  @media screen and (max-width: $desktop-width) {
+    max-width: $md-desktop-width;
+  }
+
+  @media screen and (max-width: $md-desktop-width) {
+    padding: 0 rem(10);
+    max-width: $sm-desktop-width;
+  }
+
+  @media screen and (max-width: $sm-desktop-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $phone-width) and (max-width: $table-width) {
+    padding: 0 18px;
+    width: 100%;
+  }
+
+  @media (min-width: $sm-phone-width) and (max-width: $phone-width) {
+    padding: 0 10px;
+    max-width: 100vw;
+  }
+}

@@ -1,0 +1,73 @@
+// font-size
+$main-font-size: 14px;
+$table-font-size: 13px;
+
+// font-weight
+$normal: 400;
+$bold: 700;
+
+// font-family
+$font-family-primary: 'Montserrat', arial, sans-serif;
+
+// line-height
+$line-height-primary: 1.4;
+
+// media size
+$desktop-width: 1440px;
+$md-desktop-width: 1160px;
+$sm-desktop-width: 980px;
+$table-width: 768px;
+$phone-width: 480px;
+$sm-phone-width: 320px;
+
+// other
+$primary-color: #bc9cff;
+$secondary-color: #6fcf97;
+$body-color: #fff;
+$bg-color-primary: #fff;
+$danger-color: #fc5c65;
+
+// text color
+$text-color: #1f2041;
+$text-color-brightness-75: rgba(31, 32, 65, 0.75);
+$text-color-brightness-50: rgba(31, 32, 65, 0.5);
+$text-color-brightness-25: rgba(31, 32, 65, 0.25);
+$button-text-color-primary: #fff;
+$button-text-color-secondary: $primary-color;
+
+// gradient colors
+$excellent-gradient-start: #ffe39c;
+$excellent-gradient-end: #ffba9c;
+$good-gradient-start: $secondary-color;
+$good-gradient-end: #66d2ea;
+$poor-gradient-start: #919191;
+$poor-gradient-end: #3d4975;
+$ok-gradient-start: $primary-color;
+$ok-gradient-end: #8ba4f9;
+
+// buttons color
+$button-color-primary: linear-gradient(180deg, $ok-gradient-start 0%, $ok-gradient-end 100%);
+$button-color-primaryHover: linear-gradient(180deg, $ok-gradient-start 0%, $ok-gradient-end 100%);
+$button-color-secondary: linear-gradient(180deg, $good-gradient-start 0%, $good-gradient-end 100%);
+
+// gradient colors
+$gradient-excellent: linear-gradient(
+  180deg,
+  $excellent-gradient-start 0%,
+  $excellent-gradient-end 100%
+);
+$gradient-good: $button-color-secondary;
+$gradient-poor: linear-gradient(180deg, $poor-gradient-start 0%, $poor-gradient-end 100%);
+$gradient-ok: $button-color-primary;
+
+// transition
+$tr-fast: 0.25s;
+$tr-mid: 0.5s;
+
+// border
+$border-input: 1px solid rgba(31, 32, 65, 0.25);
+$border-input-hover: 1px solid rgba(31, 32, 65, 0.5);
+
+//box shadow
+$box-shadow-primary: 0 10px 20px rgba(31, 32, 65, 0.05);
+$box-shadow-secondary: 0 0 25px rgba(0, 0, 0, 0.2);

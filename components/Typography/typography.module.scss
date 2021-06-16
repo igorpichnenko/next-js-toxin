@@ -1,0 +1,55 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.h1,
+.h2,
+.h3,
+.legend {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: rem(24);
+  line-height: rem(29);
+}
+
+.h2 {
+  font-size: rem(19);
+  line-height: rem(24);
+}
+
+.h3 {
+  font-size: rem(12);
+  line-height: rem(15);
+  text-transform: uppercase;
+}
+
+.legend {
+  font-size: rem(24);
+  line-height: rem(30);
+  font-weight: bold;
+  color: $text-color;
+}
+
+.inputLabel {
+  margin-bottom: rem(5);
+  display: inline-block;
+  width: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: rem(12);
+  line-height: rem(15);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: normal;
+  color: transparentize($text-color, 0.25);
+}

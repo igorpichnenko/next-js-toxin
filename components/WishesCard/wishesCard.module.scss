@@ -1,0 +1,42 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.wishesCard {
+  width: 380px;
+  background: $bg-color-primary;
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 380px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+.wrap {
+  padding: 41px 30px 30px;
+}
+
+.fieldset {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  border: 0;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $text-color;
+}
+
+.group {
+  position: relative;
+}

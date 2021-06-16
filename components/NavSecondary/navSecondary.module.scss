@@ -1,0 +1,39 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.item {
+  margin-bottom: rem(21);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $table-width) {
+    margin-bottom: rem(10);
+  }
+
+  .link {
+    font-size: rem(14);
+    line-height: rem(17);
+    text-decoration: none;
+    color: transparentize($text-color, 0.5);
+    transition: color 0.4s ease;
+
+    @media (max-width: $table-width) {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}

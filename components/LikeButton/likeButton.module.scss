@@ -1,0 +1,42 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.likeButton {
+  padding: 3px 8px 3px 4px;
+  min-width: 40px;
+  font-size: rem(10);
+  line-height: rem(12);
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.default {
+  color: $text-color-brightness-25;
+  border: $border-input;
+}
+
+.active {
+  color: $button-text-color-secondary;
+  border: 1px solid $button-text-color-secondary;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  margin-right: 6px;
+  width: 9.1px;
+  height: 8px;
+}
+
+.amount {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}

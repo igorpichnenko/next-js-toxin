@@ -1,0 +1,74 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.photosWrapper {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.content {
+  padding-top: rem(70);
+  padding-bottom: rem(70);
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $md-desktop-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.itemsWrapper {
+  &:nth-child(1) {
+    margin-bottom: rem(30);
+    display: flex;
+
+    @media screen and (max-width: $table-width) {
+      flex-direction: column;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-bottom: rem(30);
+  }
+
+  &:nth-child(3) {
+    display: flex;
+
+    @media screen and (max-width: $phone-width) {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: $md-desktop-width) {
+    margin-bottom: rem(30);
+  }
+}
+
+.detailsWrapper {
+  margin-right: rem(75);
+
+  @media (max-width: $phone-width) {
+    margin-right: 0;
+  }
+}
+
+.itemFeatures {
+  margin-right: rem(70);
+  min-width: 291px;
+
+  @media screen and (max-width: $table-width) {
+    margin-right: 0;
+    margin-bottom: rem(30);
+  }
+}
+
+.itemRules {
+  margin-right: rem(100);
+}
+
+.itemCancel {
+  @media (max-width: $phone-width) {
+    margin-top: rem(30);
+  }
+}

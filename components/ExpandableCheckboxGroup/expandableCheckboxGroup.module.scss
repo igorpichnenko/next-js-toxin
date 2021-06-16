@@ -1,0 +1,37 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.expandableCheckbox {
+  .summary {
+    position: relative;
+    margin-bottom: rem(17);
+    list-style: none;
+    font-family: $font-family-primary;
+    font-size: rem(12);
+    line-height: rem(15);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      right: 16px;
+      width: 12px;
+      height: 8px;
+      content: '';
+      background: url('/expand-more.png') no-repeat;
+      transition: transform 0.2s ease;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] {
+    .summary::before {
+      transform: rotate(180deg);
+    }
+  }
+}

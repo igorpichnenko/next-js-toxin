@@ -1,0 +1,33 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.textContainer {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.textItem {
+  text-align: center;
+}
+
+.textMain {
+  font-family: $font-family-primary;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: bold;
+  font-style: normal;
+  color: $primary-color;
+}
+
+.textSub {
+  font-family: $font-family-primary;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: $bold;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $primary-color;
+}

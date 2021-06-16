@@ -1,0 +1,42 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.featureItem {
+  margin-bottom: rem(20);
+  padding-bottom: rem(20);
+  display: flex;
+  border-bottom: 1px solid transparentize($text-color, 0.9);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.featureIcon {
+  margin-right: 9px;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureContent {
+  font-size: rem(14);
+  line-height: rem(24);
+}
+
+.featureTitle {
+  margin: 0;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: bold;
+  color: $text-color-brightness-75;
+}
+
+.featureDescription {
+  margin: 0;
+  color: $text-color-brightness-75;
+}

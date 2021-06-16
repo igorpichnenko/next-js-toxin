@@ -1,0 +1,52 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.inputDate {
+  padding: rem(9) rem(14);
+  box-sizing: border-box;
+  width: 100%;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: rem(14);
+  line-height: rem(24);
+  color: transparentize($text-color, 0.25);
+  background-image: url('/expand-more.jpg');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 15px);
+  background-position-y: 50%;
+  border: 1px solid transparentize($text-color, 0.75);
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.4s ease;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: transparentize($text-color, 0.75);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: transparentize($text-color, 0.25);
+
+    &::placeholder {
+      color: transparentize($text-color, 0.25);
+    }
+
+    + .inputButton {
+      border-color: transparentize($text-color, 0.25);
+    }
+  }
+}
+
+.short {
+  @media (min-width: 481px) {
+    max-width: 150px;
+  }
+}
+
+.long {
+  width: 100%;
+  max-width: 266px;
+}

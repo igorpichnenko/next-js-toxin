@@ -1,0 +1,60 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.regCard {
+  width: 380px;
+  background-color: $bg-color-primary;
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 380px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+.wrap {
+  padding: 41px 30px 30px;
+}
+
+.legendWrap {
+  margin-bottom: 20px;
+}
+
+.fieldset {
+  margin-bottom: rem(8);
+  padding: 0;
+  width: 320px;
+  border: 0;
+
+  &:nth-child(3) {
+    margin-bottom: rem(21);
+  }
+
+  &:nth-child(4) {
+    margin-bottom: rem(20);
+  }
+
+  &:nth-child(5) {
+    margin-bottom: rem(20);
+  }
+
+  @media (max-width: 380px) {
+    width: 100%;
+  }
+}
+
+.inputWrap {
+  margin-bottom: rem(10);
+}
+
+.accountEnter {
+  margin-top: rem(30);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

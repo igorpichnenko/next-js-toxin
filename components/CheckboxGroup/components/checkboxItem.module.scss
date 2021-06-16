@@ -1,0 +1,29 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.content {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.style {
+  position: absolute;
+  top: 11px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: $border-input;
+  border-radius: 4px;
+}
+
+.input {
+  display: none;
+
+  &:checked + .style {
+    background-image: url('/check.svg');
+    background-repeat: no-repeat;
+    background-position: center top 3px;
+    border: 1px solid $primary-color;
+  }
+}

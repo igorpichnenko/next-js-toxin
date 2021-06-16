@@ -1,0 +1,23 @@
+@import 'styles/utils/variables.scss';
+
+.menuMobile {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  max-width: 0;
+  min-height: 100vh;
+  background-color: $bg-color-primary;
+  transition: $tr-fast;
+
+  @media screen and (max-width: $sm-desktop-width) {
+    display: block;
+  }
+}
+
+.open {
+  max-width: 70%;
+}

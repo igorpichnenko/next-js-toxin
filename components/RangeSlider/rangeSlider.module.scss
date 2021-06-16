@@ -1,0 +1,61 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border: $border-input;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container {
+  margin-bottom: rem(12.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: rem(12);
+  line-height: rem(15);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.input {
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-align: right;
+  color: $text-color-brightness-50;
+  background-color: inherit;
+  border: unset;
+  outline: unset;
+}
+
+.thumb {
+  width: 15px;
+  height: 15px;
+  background: $button-color-secondary;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:last-of-type {
+    transform: translate(2px, -5.5px);
+  }
+
+  &:nth-of-type(4) {
+    transform: translate(-3px, -5.5px);
+  }
+}
+
+.track:nth-of-type(2) {
+  height: 6px;
+  background: $button-color-secondary;
+  transform: translateY(-1px);
+}

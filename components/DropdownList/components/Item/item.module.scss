@@ -1,0 +1,55 @@
+@import 'styles/utils/functions';
+
+.item {
+  display: grid;
+  grid-template-columns: auto 90px;
+  grid-template-rows: 30px;
+
+  .title {
+    font-family: $font-family-primary;
+    font-size: rem(12);
+    line-height: rem(15);
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #1f2041;
+    align-self: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+  }
+
+  .btn {
+    font-family: $font-family-primary;
+    font-size: rem(18);
+    line-height: rem(22);
+    font-weight: normal;
+    font-style: normal;
+    color: $text-color-brightness-50;
+    background: #fff;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btnInActive {
+    color: $text-color-brightness-25;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    cursor: auto;
+  }
+
+  .value {
+    font-family: $font-family-primary;
+    font-size: rem(12);
+    line-height: rem(15);
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $button-color-secondary;
+    justify-self: center;
+    align-self: center;
+  }
+}

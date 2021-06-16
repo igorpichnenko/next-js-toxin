@@ -1,0 +1,40 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.checkbox {
+  display: flex;
+  width: 270px;
+}
+
+.text {
+  margin: 0 0 0 29.5px;
+  display: block;
+  width: 215px;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(17);
+  font-weight: $normal;
+  color: $text-color-brightness-50;
+  cursor: pointer;
+}
+
+.title {
+  margin: 14px 0 0 29.5px;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(12);
+  font-weight: $bold;
+  color: $text-color-brightness-75;
+  cursor: pointer;
+}
+
+.comment {
+  margin: 9px 0 0 29.5px;
+  width: 230px;
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(14);
+  font-weight: $normal;
+  color: $text-color-brightness-50;
+  cursor: pointer;
+}

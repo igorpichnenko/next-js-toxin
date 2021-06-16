@@ -1,0 +1,43 @@
+@import 'styles/utils/functions';
+
+.datepicker {
+  position: relative;
+}
+
+.inputsWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $phone-width) {
+    flex-direction: column;
+  }
+}
+
+.inputItem {
+  @media screen and (max-width: $phone-width) {
+    margin-bottom: rem(10);
+  }
+}
+
+.buttonsWrapper {
+  padding: 0 rem(20) rem(20);
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleWrap {
+  margin-bottom: 5px;
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  font-family: $font-family-primary;
+  color: $danger-color;
+}
+
+.headerItem {
+  font-family: $font-family-primary;
+  font-size: rem(19);
+  font-weight: bold;
+}

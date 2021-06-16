@@ -1,0 +1,8 @@
+enum ActionType {
+  UPLOAD_IMAGE = 'UPLOAD_IMAGE',
+  GET_IMAGE = 'GET_IMAGE',
+  IMAGE_UPLOAD_ERROR = 'IMAGE_UPLOAD_ERROR',
+  SAVE_IMAGE = 'SAVE_IMAGE',
+}
+
+export default ActionType;

@@ -1,0 +1,16 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.header {
+  position: relative;
+  padding: rem(13) 0;
+  box-sizing: border-box;
+  background-color: $bg-color-primary;
+  box-shadow: $box-shadow-primary;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

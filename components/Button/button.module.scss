@@ -1,0 +1,100 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.button {
+  position: relative;
+  padding: rem(10) rem(20);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: 1;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $button-text-color-primary;
+  background: $button-color-primary;
+  border: none;
+  border-radius: 22px;
+  transition: $tr-fast;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.big {
+  padding: rem(15) rem(18);
+  width: 100%;
+  min-width: 100px;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  display: inline-flex;
+  max-width: rem(20);
+  max-height: rem(20);
+  align-items: center;
+  fill: $bg-color-primary;
+}
+
+.white {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(12);
+  color: $button-text-color-secondary;
+  background: none;
+  transition: $tr-fast;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: $button-color-primary;
+    border-radius: 22px;
+    transition: $tr-fast;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    content: '';
+    background: #fff;
+    border-radius: 22px;
+    transition: $tr-fast;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+
+.noBg {
+  margin: 0;
+  padding: 0;
+  color: $primary-color;
+  background: none;
+}

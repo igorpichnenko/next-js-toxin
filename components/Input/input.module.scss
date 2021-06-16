@@ -1,0 +1,113 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils//functions.scss';
+
+.inputWrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.inputButton {
+  padding: 0;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  background-image: url('/arrow-forward.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  transition: border 0.4s ease, background 0.1s ease;
+  cursor: pointer;
+
+  &:active {
+    background-position: 78% center;
+  }
+}
+
+.input {
+  padding: rem(9) rem(14);
+  box-sizing: border-box;
+  width: 100%;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: rem(14);
+  line-height: rem(24);
+  color: transparentize($text-color, 0.25);
+  border: 1px solid transparentize($text-color, 0.75);
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.4s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: transparentize($text-color, 0.75);
+    transition: color 0.4s ease;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: transparentize($text-color, 0.25);
+
+    &::placeholder {
+      color: transparentize($text-color, 0.25);
+    }
+
+    + .inputButton {
+      border-color: transparentize($text-color, 0.25);
+    }
+  }
+
+  &WithButton {
+    padding-right: 0;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &Focused {
+    border-color: transparentize($text-color, 0.25);
+
+    &::placeholder {
+      color: transparentize($text-color, 0.25);
+    }
+  }
+}
+
+.inputBaseWrap {
+  display: flex;
+  width: 100%;
+  background-color: $bg-color-primary;
+
+  &WithError {
+    /* stylelint-disable no-descending-specificity */
+    .inputButton {
+      border-color: transparentize($danger-color, 0.25);
+    }
+    /* stylelint-enable no-descending-specificity */
+
+    .input {
+      border-color: transparentize($danger-color, 0.25);
+
+      &:hover,
+      &:focus {
+        border-color: transparentize($danger-color, 0.25);
+
+        & + .inputButton {
+          border-color: transparentize($danger-color, 0.25);
+        }
+      }
+    }
+  }
+}
+
+.errorMessages {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  color: darken($danger-color, 5%);
+}

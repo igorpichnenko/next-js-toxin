@@ -1,0 +1,34 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.button {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-primary;
+  font-size: rem(26);
+  line-height: 1;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $button-text-color-primary;
+  background: $button-color-primary;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: $danger-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &::after {
+    content: 'x';
+  }
+}

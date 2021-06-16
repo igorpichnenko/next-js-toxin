@@ -1,0 +1,25 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.itemMarker {
+  margin-top: rem(5);
+  width: rem(10);
+  height: rem(10);
+  background: $text-color-brightness-25;
+  border-radius: 50%;
+  align-self: start;
+}
+
+.item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: rem(10) auto;
+  column-gap: rem(10);
+  list-style-type: none;
+  font-family: $font-family-primary;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: $normal;
+  font-style: normal;
+  color: $text-color-brightness-75;
+}

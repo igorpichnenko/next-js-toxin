@@ -1,0 +1,39 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.roomTitle {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.numSymbol {
+  font-size: rem(14);
+  color: $text-color;
+}
+
+.num {
+  margin-right: rem(2);
+  display: inline-block;
+  font-family: $font-family-primary;
+  font-size: rem(19);
+  font-weight: bold;
+  color: $text-color;
+}
+
+.type {
+  font-size: rem(14);
+  color: $primary-color;
+}
+
+.price {
+  font-size: rem(14);
+  color: $text-color;
+  color: $text-color-brightness-50;
+}
+
+.day {
+  font-size: rem(12);
+  font-weight: lighter;
+}

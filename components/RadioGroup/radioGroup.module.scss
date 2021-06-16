@@ -1,0 +1,18 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.radioGroup {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.radioGroup.hor {
+  .item {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

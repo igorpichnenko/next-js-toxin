@@ -1,0 +1,23 @@
+@import 'styles/utils/variables.scss';
+@import 'styles/utils/functions.scss';
+
+.skeleton {
+  margin-top: 10px;
+  margin-left: 10px;
+
+  @media (max-width: 650px) {
+    margin-left: 180px;
+  }
+
+  @media (max-width: 549px) {
+    margin-left: rem(120);
+  }
+
+  @media (max-width: 430px) {
+    margin-left: rem(80);
+  }
+
+  @media (max-width: 360px) {
+    margin-left: rem(20);
+  }
+}

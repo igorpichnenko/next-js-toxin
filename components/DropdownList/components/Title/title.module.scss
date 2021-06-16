@@ -1,0 +1,13 @@
+@import 'styles/utils/functions';
+
+.title {
+  margin-bottom: rem(5);
+  font-family: $font-family-primary;
+  font-size: rem(12);
+  line-height: rem(15);
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $text-color;
+  cursor: pointer;
+}
