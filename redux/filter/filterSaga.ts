@@ -8,15 +8,13 @@ import randomRooms from './randomRooms';
 
 function* filterWorker({ payload }: IChangeForm): Generator<any, void, any> {
   try {
-    //yield delay(1000);
+    yield delay(1000);
     const data = yield fb.getAllRooms(payload);
     const rooms = yield filterRequest(data, payload);
     yield put(setRooms(rooms));
 
-    yield call(fb.addDocument(), 'rooms', randomRooms());
-    console.log(rooms)
+    //yield call(fb.addDocument(), 'rooms', randomRooms());
   } catch (e) {
-    console.log(e)
     yield put(filterError({ code: e.code || null, message: e.message || null }));
   }
 }
