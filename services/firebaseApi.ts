@@ -7,7 +7,7 @@ import { IFilterState } from 'components/FilterRoom/FilterRoom';
 import { IReviewItem } from 'components/Review/Review';
 import { IRemoveRequest } from 'redux/userRooms/userRoomsActions';
 import { filterByCheckbox } from './helpers';
-import { firebaseConfigV2 } from './firebaseConfigs';
+import { firebaseConfig } from './firebaseConfigs';
 import 'firebase/storage';
 
 interface IFirebaseConfigTypes {
@@ -178,6 +178,6 @@ class FirebaseApi {
   }
 }
 
-const firebaseApi = new FirebaseApi(firebaseConfigV2);
+const firebaseApi = new FirebaseApi(firebaseConfig);
 
 export default firebaseApi;

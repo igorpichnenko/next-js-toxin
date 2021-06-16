@@ -1,3 +1,13 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyD7_4M6ea4RBB3j1cd4ogrXXqwR-Pa7XG4",
+  authDomain: "heroku-229f8.firebaseapp.com",
+  databaseURL: "https://heroku-229f8-default-rtdb.firebaseio.com",
+  projectId: "heroku-229f8",
+  storageBucket: "heroku-229f8.appspot.com",
+  messagingSenderId: "897480600718",
+  appId: "1:897480600718:web:87d5bf078f88988e11addf"
+};
+
 const firebaseConfigV1 = {
   apiKey: 'AIzaSyDJlgyL45Iv5Ki_0QIZFW9LYH4NfwWTrv8',
   authDomain: 'react-toxin.firebaseapp.com',
@@ -18,4 +28,4 @@ const firebaseConfigV2 = {
   databaseURL: 'https://react-toxin-v2-default-rtdb.europe-west1.firebasedatabase.app/',
 };
 
-export { firebaseConfigV1, firebaseConfigV2 };
+export { firebaseConfig, firebaseConfigV1, firebaseConfigV2 };
