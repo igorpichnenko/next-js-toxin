@@ -49,7 +49,7 @@ class FirebaseApi {
     const { rangeSlider } = payload;
     const [start, end] = rangeSlider;
 
-    const roomsCollection = this.db.collection('rooms').orderBy('price').startAt(start).endAt(end).limit(80);
+    const roomsCollection = this.db.collection('rooms').orderBy('price').startAt(start).endAt(end);
 
     return filterByCheckbox(roomsCollection, payload).get();
   }
@@ -165,6 +165,10 @@ class FirebaseApi {
 
   public getDownloadURL() {
     return this.app.storage.getDownloadURL;
+  }
+
+  public addDocument() {
+    return this.app.firestore.addDocument
   }
 
   private init(config: IFirebaseConfigTypes) {
