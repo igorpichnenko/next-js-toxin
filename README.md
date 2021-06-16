@@ -38,7 +38,7 @@ npm run start
 ##### react-localization
 
 
-## Плагины которые использовались в проекте.. 
+## Плагины которые использовались в проекте:
 
 #### react-datepicker
 #### react-slider
