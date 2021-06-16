@@ -74,7 +74,6 @@ function datesValid(bookingDates: IBookingDate[], pickerStart: Date, pickerEnd: 
 }
 
 function filterRequest(data: QuerySnapshot<DocumentData>, payload: IFilterState) {
-
   const { dropdownGuest, dropdownRoom, datepicker } = payload;
   const [adult, children, babies] = dropdownGuest;
   const guests = adult + children;
@@ -150,7 +149,6 @@ function filterByCheckbox(
   if (isHelper) {
     collection = collection.where('isHelper', '==', isHelper);
   }
-
 
   return collection.limit(40);
 }

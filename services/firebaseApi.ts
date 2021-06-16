@@ -168,7 +168,7 @@ class FirebaseApi {
   }
 
   public addDocument() {
-    return this.app.firestore.addDocument
+    return this.app.firestore.addDocument;
   }
 
   private init(config: IFirebaseConfigTypes) {

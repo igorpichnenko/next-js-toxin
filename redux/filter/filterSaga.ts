@@ -5,7 +5,6 @@ import ActionType from './filterActionTypes';
 import { setRooms, IChangeForm, filterError } from './filterActions';
 import randomRooms from './randomRooms';
 
-
 function* filterWorker({ payload }: IChangeForm): Generator<any, void, any> {
   try {
     yield delay(1000);
@@ -13,7 +12,7 @@ function* filterWorker({ payload }: IChangeForm): Generator<any, void, any> {
     const rooms = yield filterRequest(data, payload);
     yield put(setRooms(rooms));
 
-    //yield call(fb.addDocument(), 'rooms', randomRooms());
+    // yield call(fb.addDocument(), 'rooms', randomRooms());
   } catch (e) {
     yield put(filterError({ code: e.code || null, message: e.message || null }));
   }

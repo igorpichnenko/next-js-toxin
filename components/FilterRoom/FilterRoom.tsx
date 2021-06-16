@@ -54,7 +54,7 @@ const FilterRoom = ({ changeUrl }: IFilterRooms) => {
   roomStrings.setLanguage(locale);
 
   const { filter } = useSelector((state: State) => state.filter);
-  
+
   const dispatch = useDispatch();
 
   const onChangeDateInfo = (start: Date | null, end: Date | null) => {
