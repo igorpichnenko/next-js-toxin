@@ -86,10 +86,15 @@ const dropdownRoomParam = [
   { title: Rooms.baths, value: 0, id: 3 },
 ];
 
+const startDate = new Date().toISOString().split('T')[0];
+const currentDate = new Date()
+const toDay = new Date(currentDate.getTime() + (172800000))
+const endDate = toDay.toISOString().split('T')[0];
+
 const initState = {
   dropdownGuest: [0, 0, 0],
   dropdownRoom: [0, 0, 0],
-  datepicker: ['2021-05-14', '2021-05-19'],
+  datepicker: [startDate, endDate],
   checkboxRule: [false, false, false],
   checkboxRich: [false, false],
   checkboxList: [false, false, false, false, false, false],
